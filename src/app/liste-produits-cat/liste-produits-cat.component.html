@@ -1,0 +1,46 @@
+<div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-color:antiquewhite ; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <div class="brand text-center text-red"></div>
+                    <h3 class="pb-2">Produits de la cat&eacute;gorie {{categorie.nomCategorie}}</h3>
+                        <br>
+
+                        <table width="100%">  
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nom du produit</th>
+                                    <th>Image</th>
+                                    <th>Quantit&eacute; disponible</th>
+                                    
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+            
+
+                                    <tr *ngFor="let p of produits" >
+                                        <td>{{p.idProduit}}</td>
+                                        <td>{{p.libProduit}}</td>
+                                        <td><img src="http://localhost:9090{{p.img}}" style="height: 50px;  width: 50px;"></td>
+                                        <td>{{p.quantite}}</td>
+                                        
+                                    </tr>
+
+                            
+                            
+                            </tbody>
+                            </table>
+                            <br>  <br>
+                            <button (click)="afficherProduits()"><h6>Gestion des produits</h6></button><br>
+                            <button (click)="afficherCategories()"><h6>Retour &agrave; la liste des cat&eacute;gories</h6></button>
+                    
+            
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,62 @@
+<div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-color:antiquewhite ; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <div class="brand text-center text-red"></div>
+                <br>
+                    <h1 class="pb-2">GESTION DES PRODUITS
+                        <!--<sec:authorize access="hasAuthority('client')">Nos produits</sec:authorize> -->
+                    </h1>
+                        <br>
+
+                    <p *ngIf="msgErreur">{{verifAjoutMsg.message}}</p><br>
+
+<table width="100%">  
+    <thead>
+        <tr>
+            <th>Cat&eacute;gorie</th>
+            <th>ID</th>
+            <th>Nom du produit</th>
+            <th>Image</th>
+            <th>Quantit&eacute; disponible</th>
+        
+            <td></td>
+            <td></td>
+            <td></td>
+          
+            </tr>
+    </thead>
+    
+    <tbody>
+
+
+            <tr *ngFor="let p of produits" >
+            <td>{{p.categorie.nomCategorie}}</td>
+            <td>{{p.idProduit}}</td>
+            <td>{{p.libProduit}}</td>
+            <td><img src="http://localhost:9090{{p.img}}" style="height: 50px;  width: 50px;"></td>
+            <td>{{p.quantite}}</td>
+
+    
+            <td><button (click)="supprimer(p.idProduit)">Supprimer le produit</button></td>
+            <td><button (click)="modifier(p.idProduit)">Modifier le produit</button></td>
+            <td><button (click)="verifAjout(p.idProduit)">Ajouter au panier</button></td>
+      
+            </tr>
+     
+    </tbody>
+    </table>
+
+    <button (click)="ajouterProduit()"><h6>Ajouter un produit</h6></button><br>
+    <button (click)="accueil()"><h6>Retour &agrave; l'accueil</h6></button>
+
+
+    
+
+                
+
+                    
+</div>
+</div>
+</div>
+</div>

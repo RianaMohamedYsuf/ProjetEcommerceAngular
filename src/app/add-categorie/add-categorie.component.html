@@ -1,0 +1,9 @@
+<h4>Nouvelle categorie</h4>
+
+<form (ngSubmit)="SaveCategorie()">
+
+    Nom de la catégorie : <input type="text" name="nomCategorie" [(ngModel)]="categorie.nomCategorie" /><br>
+    Description : <input type="text" name="description" [(ngModel)]="categorie.description" /><br>
+    
+    <input type="submit" value="Ajouter">
+    </form>

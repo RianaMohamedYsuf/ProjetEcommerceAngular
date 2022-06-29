@@ -1,0 +1,54 @@
+<div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-color:antiquewhite ; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="text-center">
+                <div class="brand text-center text-red"></div>
+                    <h1 class="pb-2">GESTION DES CATEGORIES
+                        <!-- <sec:authorize access="hasAuthority('client')">Nos catégories</sec:authorize> -->
+                    </h1>
+                        <br>
+
+
+<table width="100%">
+    <thead>
+    <tr>
+    <th>ID</th>
+    <th>Nom de la cat&eacute;gorie</th>
+    <th>Description</th>
+    <th>Articles</th> 
+
+    <td></td>
+    <td></td>
+
+    </tr>
+    </thead>
+    
+    <tbody>
+    
+        <tr *ngFor="let c of categories">
+        <td>{{c.idCategorie}}</td>
+        <td>{{c.nomCategorie}}</td>
+        <td>{{c.description}}</td>
+        <td><button (click)="afficherProduitCat(c.idCategorie)">Liste des produits</button></td>
+
+
+        <td><button (click)="supprimer(c.idCategorie)">Supprimer la cat&eacute;gorie</button></td>
+        <td><button (click)="modifier(c.idCategorie)">Modifier la cat&eacute;gorie</button></td>
+
+        </tr>
+
+    
+    </tbody>
+    </table>
+    <br>  <br>
+
+
+    <button (click)="ajouterCategorie()"><h6>Ajouter une cat&eacute;gorie</h6></button><br>
+    <button (click)="accueil()"><h6>Retour &agrave; l'accueil</h6></button>
+
+       
+</div>
+</div>
+</div>
+</div>
+

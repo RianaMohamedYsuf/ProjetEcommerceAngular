@@ -1,0 +1,69 @@
+<header class="header">
+        
+    <nav class="navbar navbar-expand-lg navbar-dark secondary-color-dark">
+    
+    
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="assets/images/Logo-quadri-LJ.jpg" alt="" width="175"/></a>
+   
+   
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    
+    <ul class="navbar-nav mx-auto mr-auto">
+    <li class="nav-item active mx-2">
+    <a class="nav-link " (click)="afficherlogin()">Login</a>
+    <span class="sr-only">(current)</span>
+    </li>
+    
+
+
+    
+
+    <li class="nav-item mx-2">
+    <a class="nav-link" href="#boutique">Boutique</a>
+    </li>
+    <li class="nav-item mx-2">
+    <a class="nav-link" href="#equipe">Notre &eacute;quipe</a>
+    </li>
+    <li class="nav-item mx-2">
+    <a class="nav-link" href='afficherProduits'>Articles</a>
+    </li>						
+    <li class="nav-item mx-2">
+    <a class="nav-link" href="#contact">Contact</a>
+    </li>								
+    
+    
+    <form class="form-inline text-white"
+        action="${pageContext.request.contextPath}/Rechercher" method="post">
+    <div class="md-form my-0">
+    <input class="form-control mr-sm-2" type="text" name ="nomProduit" placeholder="Rechercher" aria-label="Rechercher">
+    <input type="submit" value="Valider">
+    </div>
+    </form>
+
+        <li class="nav-item active mx-2">
+        <a class="nav-link " href="#favoris"><i class="fa fa-heart"></i> Favoris</a>
+        </li>
+        <li class="nav-item active mx-2">
+        <a class="nav-link " href='afficherPanier'><i class="fa fa-shopping-bag"></i> Panier</a>
+        </li>
+    </ul>
+
+    
+    </div>
+
+    </div>
+    
+    </nav>
+    <div class="promo"><span>Profitez de -30% sur 4 produits de votre choix et LIVRAISON OFFERTE d&egrave;s 35 &euro; <br> Avec le code : PROM30 </span></div>
+    <br> <br>
+</header>
+

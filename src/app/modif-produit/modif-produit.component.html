@@ -1,0 +1,15 @@
+<h4>Modifier le produit</h4>
+
+<form (ngSubmit)="SaveProduit()">
+
+    Nom du  produit : <input type="text" name="libProduit" id="libProduit" [(ngModel)]="libProduit" /><br>
+    Image : <input type="file" name="file" id="file" (change)="selectEvent($event)" /><br>
+    Quantite disponible : <input type="number" name="quantite" id="quantite" [(ngModel)]="quantite" /><br>
+    Catégorie : <select name="idCate" id="idCate" [(ngModel)]="idCate">
+                <option *ngFor="let c of categories" [ngValue] ="c.idCategorie">{{c.nomCategorie}}</option>
+                </select>
+    
+
+    
+    <input type="submit" value="Modifier">
+    </form>
